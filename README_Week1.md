@@ -128,7 +128,7 @@ The graph shows the operation of the inverter.
 ![xsch_inv_tran](https://user-images.githubusercontent.com/58168687/218140761-4ec2f475-6a2d-4a5c-a113-2174cf79d895.PNG)
 
 ### Simulation using Magic and Ngspice
-The layout 'inverter.mag' was drawn in Magic as shown.
+The layout 'inverter.mag' was drawn in Magic as shown below.
 
 ![mag_inv_lay](https://user-images.githubusercontent.com/58168687/218141392-60864dbd-7d30-424e-a27f-0857970db138.PNG)
 
