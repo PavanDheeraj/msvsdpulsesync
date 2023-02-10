@@ -107,9 +107,11 @@ $ cp /usr/local/share/pdk/sky130A/libs.tech/netgen//sky130A_setup.tcl .
 
 Create the schematic for inverter in xschem. It is made by placing components from the Open PDK library.
 DC analysis is done by using the .dc command . This information must be entered by the user in code_shown.sym from components. Also, this symbol contains the library file.
+
 ![Screenshot (19)](https://user-images.githubusercontent.com/58168687/218138987-c4463a6e-c961-415c-93a2-523456a115d6.png)
 
 Inverter Schematic
+
 ![inverter](https://user-images.githubusercontent.com/58168687/218140120-f64ac384-bd95-4d35-ac17-e14783db6aa1.PNG)
 
 Click on Netlist option available on the top right corner of the window to generate a spice file for the schematic created. Click on Simulate to run the simulation and obtain the voltage-transfer characteristic(VTC) for the inverter.
@@ -118,13 +120,16 @@ Click on Netlist option available on the top right corner of the window to gener
 
 #### Transient Analaysis of CMOS inverter
 Transient analysis is done by using the .tran command . This information must be entered by the user in code_shown.sym from components. Also, this symbol contains the library file.
+
 ![xsch_inv_img](https://user-images.githubusercontent.com/58168687/218140208-e6525092-df58-4d91-a32d-b9e4c90a0688.PNG)
 
-The graph shows the operation of the inverter. 
+The graph shows the operation of the inverter.
+
 ![xsch_inv_tran](https://user-images.githubusercontent.com/58168687/218140761-4ec2f475-6a2d-4a5c-a113-2174cf79d895.PNG)
 
 ### Simulation using Magic and Ngspice
 The layout 'inverter.mag' was drawn in Magic as shown.
+
 ![mag_inv_lay](https://user-images.githubusercontent.com/58168687/218141392-60864dbd-7d30-424e-a27f-0857970db138.PNG)
 
 The spice netlist without parasitics is extracted using the following commands:
@@ -133,13 +138,16 @@ $ extract all
 $ ext2spice lvs
 $ ext2spice -d 
 ```
+
 This spice netlist is again simulated using Ngspice. 
+
 ![mag_inv_tran](https://user-images.githubusercontent.com/58168687/218142957-088a643b-f6b9-4f04-97d9-42d5dcd0df16.PNG)
 
 ### LVS Report
 The layout vs schematic compares the pre-layout netlist with the netlist extracted from the layout(in our case, without the parasitics). The mismatch is due to voltage sources used in the pre-layout simulation.
 
 The report is shown below:
+
 ![lvs](https://user-images.githubusercontent.com/58168687/218144359-a9001a69-49b7-4b3f-9053-b47758eb17f2.PNG)
 
 ### Comparison of results
